@@ -1,9 +1,16 @@
 'use strict';
+var pm2 = require('pm2');
 
-console.log('child started');
-function logMessage() {
-  console.log('child is running..');
-}
+pm2.connect((err) => {
+  if (err) {
+    console.error(err);
+    process.exit();
+  }
 
-setInterval(logMessage, 2000);
-
+  setInterval(() => {
+    console.log('Test running');
+    pm2.sendDataToProcessId(0,
+      { type: 'process:msg', data: 'data', topic: 'topic' },
+      (err, res) => {});
+  }, 5000);
+});
