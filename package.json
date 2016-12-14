@@ -1,0 +1,15 @@
+{
+  "name": "spool",
+  "version": "0.0.1",
+  "description": "PM2 experiment",
+  "author": "Ergun Coruh",
+  "license": "MIT",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecoruh/pmspool/"
+  },
+  "dependencies": {
+    "pm2": "2.1.6"
+  }
+}

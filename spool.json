@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "script": "spool.js",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss.SSSS Z",
+      "merge_logs": true,
+      "out_file": "./.pm2/logs/spool.log",
+      "error_file": "./.pm2/logs/spool.log",
+      "max_restarts": 10,
+      "min_uptime": "3000"
+    }
+  ]
+}
